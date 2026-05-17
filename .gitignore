@@ -1,0 +1,10 @@
+venv/
+.venv/
+cifar-10-python/
+dataset/
+Dataset/
+outputs/
+models/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
