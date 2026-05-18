@@ -52,20 +52,12 @@ def evaluate_model(model, X_test, y_test):
         y_pred,
         average='weighted'
     )
-
-    print("\n============================")
     print("MODEL EVALUATION")
-    print("============================")
-
     print(f"Accuracy : {accuracy:.4f}")
     print(f"Precision: {precision:.4f}")
     print(f"Recall   : {recall:.4f}")
     print(f"F1-Score : {f1:.4f}")
-
-    print("\n============================")
     print("CLASSIFICATION REPORT")
-    print("============================")
-
     print(
         classification_report(
             y_true,
