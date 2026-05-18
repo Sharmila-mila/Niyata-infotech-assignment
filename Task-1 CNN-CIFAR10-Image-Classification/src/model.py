@@ -4,8 +4,6 @@ from tensorflow.keras import models, layers
 def build_cnn_model():
 
     model = models.Sequential()
-
-    # First CNN Block
     model.add(
         layers.Conv2D(
             32,
@@ -30,8 +28,6 @@ def build_cnn_model():
     model.add(layers.MaxPooling2D((2, 2)))
 
     model.add(layers.Dropout(0.25))
-
-    # Second CNN Block
     model.add(
         layers.Conv2D(
             64,
@@ -55,8 +51,6 @@ def build_cnn_model():
     model.add(layers.MaxPooling2D((2, 2)))
 
     model.add(layers.Dropout(0.25))
-
-    # Third CNN Block
     model.add(
         layers.Conv2D(
             128,
@@ -80,11 +74,7 @@ def build_cnn_model():
     model.add(layers.MaxPooling2D((2, 2)))
 
     model.add(layers.Dropout(0.3))
-
-    # Flatten Layer
     model.add(layers.Flatten())
-
-    # Dense Layers
     model.add(
         layers.Dense(
             256,
@@ -93,8 +83,6 @@ def build_cnn_model():
     )
 
     model.add(layers.Dropout(0.5))
-
-    # Output Layer
     model.add(
         layers.Dense(
             10,
