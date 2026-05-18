@@ -4,20 +4,7 @@ import matplotlib.pyplot as plt
 
 from tensorflow.keras.preprocessing import image
 
-
-class_names = [
-    'Airplane',
-    'Automobile',
-    'Bird',
-    'Cat',
-    'Deer',
-    'Dog',
-    'Frog',
-    'Horse',
-    'Ship',
-    'Truck'
-]
-
+class_names = ['Airplane','Automobile','Bird','Cat','Deer','Dog','Frog','Horse','Ship','Truck']
 
 IMG_SIZE = 32
 
@@ -30,11 +17,8 @@ def predict_multiple_images(model, folder_path):
 
         img_path = os.path.join(folder_path, img_file)
 
-        img = image.load_img(
-            img_path,
-            target_size=(IMG_SIZE, IMG_SIZE)
-        )
-
+        img = image.load_img(img_path,target_size=(IMG_SIZE, IMG_SIZE))
+        
         img_array = image.img_to_array(img)
 
         img_array = img_array / 255.0
