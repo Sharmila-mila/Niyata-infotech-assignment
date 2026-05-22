@@ -20,7 +20,7 @@ def train_model():
     
     early_stop = EarlyStopping(monitor='val_loss',patience=5,restore_best_weights=True)
 
-    history = model.fit(datagen.flow(X_train,y_train,batch_size=32),epochs=25,validation_data=(X_test, y_test),callbacks=[early_stop])
+    history = model.fit(datagen.flow(X_train,y_train,batch_size=32),epochs=35,validation_data=(X_test, y_test),callbacks=[early_stop])
 
     model.save("models/cnn_cifar10_model.keras")
 
