@@ -48,5 +48,18 @@ Silhouette Score
 
 Silhouette Score was used to evaluate how well the songs were separated into clusters.
 
+INFERENCE:
+
+Inference is used to predict the category of new Spotify songs using the trained K-Means clustering model.
+In this project, song audio features such as danceability, energy, tempo, loudness, acousticness, and valence are given as input to the model.
+The trained model analyzes these feature patterns and predicts the most suitable cluster for the song. Based on the predicted cluster, the song is categorized into meaningful groups such as:
+
+Dance Songs
+Sad Emotional Songs
+Love Melody Songs
+Party Vibe Songs
+Relax Acoustic Songs
+
+
 
 
